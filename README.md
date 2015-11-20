@@ -3,6 +3,8 @@
 
 
 
+Original repository: [https://github.com/stephenturner/annotables](https://github.com/stephenturner/annotables).
+
 Tables for annotating gene lists and converting between identifiers.
 
 ## Why?
@@ -39,7 +41,7 @@ Installation:
 
 ```r
 install.packages("devtools")
-devtools::install_github("stephenturner/annotables")
+devtools::install_github("mdozmorov/annotables")
 ```
 
 It isn't necessary to load dplyr, but the tables are `tbl_df` and will print nicely if you have dplyr loaded.
