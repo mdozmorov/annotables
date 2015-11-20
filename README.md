@@ -269,6 +269,13 @@ grch38 <- useMart("ensembl") %>%
   getBM(mart=., attributes=myattributes) %>% 
   fix_genes
 
+# Human GRCh37/hg19
+grch37 <- useMart(biomart ="ENSEMBL_MART_ENSEMBL", host="grch37.ensembl.org", path="/biomart/martservice") %>%
+  useDataset(mart=., dataset="hsapiens_gene_ensembl") %>% 
+  getBM(mart=., attributes=myattributes) %>% 
+  fix_genes
+save(grch37, file = "data/grch37.rda")
+
 # Mouse
 grcm38 <- useMart("ensembl") %>% 
   useDataset(mart=., dataset="mmusculus_gene_ensembl") %>% 
