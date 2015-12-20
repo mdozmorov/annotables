@@ -26,3 +26,13 @@ for (t in types$.) {
   write.table(mtx, paste(t, ".bed", sep=""), sep="\t", quote = F, col.names = F, row.names = F)
 }
 
+# Extract coordinates of all genes
+# Symbols
+all_genes_symbol_hg19 <- grch37[ !(is.na(grch37$symbol)) | (grch37$symbol != ""), , drop = FALSE]
+all_genes_symbol_hg19 <- data.frame(all_genes_symbol_hg19$chr, all_genes_symbol_hg19$start, all_genes_symbol_hg19$end, name=paste(all_genes_symbol_hg19$entrez, all_genes_symbol_hg19$symbol, sep = "|"), all_genes_symbol_hg19$strand)
+write.table(all_genes_symbol_hg19, "all_genes_symbol_hg19.bed", sep="\t", quote = F, col.names = F, row.names = F)
+# EntrezIDs
+all_genes_entrez_hg19 <- grch37[ grch37$entrez != "?", , drop = FALSE]
+all_genes_entrez_hg19 <- data.frame(all_genes_entrez_hg19$chr, all_genes_entrez_hg19$start, all_genes_entrez_hg19$end, name=paste(all_genes_entrez_hg19$entrez, all_genes_entrez_hg19$symbol, sep = "|"), all_genes_entrez_hg19$strand)
+write.table(all_genes_entrez_hg19, "all_genes_entrez_hg19.bed", sep="\t", quote = F, col.names = F, row.names = F)
+
