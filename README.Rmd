@@ -18,7 +18,7 @@ Tables for annotating gene lists and converting between identifiers.
 ### Misc. functions (in "R" folder)
 
 - `grch37_to_BED.R` and `grch37_to_bed.sh` - extract genomic coordinates of gene families into separate subfolders
-
+- `grch37_to_KEGG.R` - extract genomic coordinates of genes in KEGG pathways
 
 
 ## Why?
