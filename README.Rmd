@@ -17,8 +17,11 @@ Tables for annotating gene lists and converting between identifiers.
 
 ### Misc. functions (in "R" folder)
 
-- `grch37_to_BED.R` and `grch37_to_bed.sh` - extract genomic coordinates of gene families into separate subfolders
-- `grch37_to_KEGG.R` - extract genomic coordinates of genes in KEGG pathways
+- `grch37_all_genes_to_BED.R` - extract promoters of all 21,969 gene symbols/entrezIDs into `all_genes_entrez/symbol_hg19.bed` files.
+- `grch37_gene_classes_to_BED.R/sh` - extract genomic coordinates of gene classes into separate subfolders. 
+- `grch37_KEGG_to_BED.R` - extract genomic coordinates of genes in KEGG pathways.
+
+
 
 
 ## Why?
